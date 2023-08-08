@@ -6,5 +6,19 @@ def main(data:str):
     Returns:
         int: return answer
     """
-    
-# Read data from file
+    sum=0
+    i=0
+    l=[]
+    for i in range(len(data)):
+        if data[i].isdigit()==True:
+            l.append(data[i])
+        a="".join(l)
+        x=int(a)
+    while x>0:
+        r=x%10
+        i+=0
+        sum+=r
+        x//=10
+    return sum
+f=open("data/data07.txt").read()
+print(main(f))
